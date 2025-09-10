@@ -16,14 +16,26 @@ sudo modprobe can
 sudo modprobe can_raw
 sudo modprobe mttcan
 ```
+OR use `vcan`
+```
+sudo modprobe vcan
+sudo ip link add dev vcan0 type vcan
+```
 OR use `USB-CAN`
 ```
-$ sudo modprobe gs_usb
+sudo modprobe gs_usb
 ```
 ### 2.  **Config Socket CAN**
 ```
 sudo ip link set can0 up type can bitrate 250000
 ```
+
+## Start Nodes (can_decoder)
+Launch the `can_decoder`  node: 
+```
+roslaunch can_decoder can_decoder.launch
+```
+
 ## CAN Test Command
 ```
 ## CAN massage send
@@ -31,11 +43,8 @@ cansend can0 101#0100000000000000
 
 ## CAN massage receive
 candump can0  # Listen CAN0
-```
-## Start Nodes (can_decoder)
-Launch the `can_decoder`  node: 
-```
-roslaunch can_decoder can_decoder.launch
+
+## Record CAN massges
 ```
 record CAN massges `/can0/recv`: 
 ```
@@ -45,4 +54,3 @@ record CAN massges `all`:
 ```
 rosbag record -a
 ```
-
