@@ -29,7 +29,6 @@ sudo modprobe gs_usb
 ```
 sudo ip link set can0 up type can bitrate 250000
 ```
-
 ## Start Nodes (can_decoder)
 Launch the `can_decoder`  node: 
 ```
@@ -43,7 +42,7 @@ cansend can0 101#0100000000000000
 
 ## CAN massage receive
 candump can0  # Listen CAN0
-
+```
 ## Record CAN massges
 ```
 record CAN massges `/can0/recv`: 
