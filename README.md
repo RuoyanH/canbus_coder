@@ -46,10 +46,9 @@ candump can0  # Listen CAN0
 ## Record CAN massges
 ```
 record CAN massges `/can0/recv`: 
-```
-rosbag record /can0/recv
-```
 record CAN massges `all`: 
 ```
+```
+rosbag record /can0/recv
 rosbag record -a
 ```
