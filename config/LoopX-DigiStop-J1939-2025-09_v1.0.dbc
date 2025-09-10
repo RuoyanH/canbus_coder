@@ -1,0 +1,221 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: LoopX DigiStop
+VAL_TABLE_ Command_Codes 14 "Propulsion_setpoints Inhibit ON" 6 "Propulsion_setpoints Inhibit OFF" 12 "Stand_Down Inhibit ON" 4 "Stand_Down Inhibit OFF" 13 "BYPASS_PROPULSION Inhibit ON" 5 "BYPASS_PROPULSION Inhibit OFF" 11 "SLOW_DOWN Inhibit ON" 10 "CONTROLLED_STOP Inhibit ON" 3 "SLOW_DOWN Inhibit OFF" 2 "CONTROLLED_STOP Inhibit OFF" 9 "EMERGENCY_STOP Inhibit ON" 8 "Normal operation Inhibit ON" 1 "EMERGENCY_STOP Inhibit OFF " 0 "Normal operation Inhibit OFF" ;
+
+
+BO_ 2566842098 DigiStop_TimeResponse: 8 DigiStop
+ SG_ Local_Hour_offset : 63|8@0+ (1,-125) [-125|130] ""  LoopX
+ SG_ Local_Minute_offset : 55|8@0+ (1,-125) [-125|130] ""  LoopX
+ SG_ Year : 47|8@0+ (1,1985) [1985|2240] ""  LoopX
+ SG_ Day : 39|8@0+ (0.25,0) [0|63.75] ""  LoopX
+ SG_ Month : 31|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ Hours : 23|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ Minutes : 15|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ Seconds : 7|8@0+ (0.25,0) [0|63.75] ""  LoopX
+
+BO_ 2162830066 DigiStop_TimeRequest: 8 DigiStop
+ SG_ Local_Hour_offset : 63|8@0+ (1,-125) [-125|130] ""  LoopX
+ SG_ Local_Minute_offset : 55|8@0+ (1,-125) [-125|130] ""  LoopX
+ SG_ Year : 47|8@0+ (1,1985) [1985|2240] ""  LoopX
+ SG_ Day : 39|8@0+ (0.25,0) [0|63.75] ""  LoopX
+ SG_ Month : 31|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ Hours : 23|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ Minutes : 15|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ Seconds : 7|8@0+ (0.25,0) [0|63.75] ""  LoopX
+
+BO_ 2566841898 CxD_TimeResponse: 8 LoopX
+ SG_ Local_Hour_offset : 63|8@0+ (1,-125) [-125|130] ""  DigiStop
+ SG_ Local_Minute_offset : 55|8@0+ (1,-125) [-125|130] ""  DigiStop
+ SG_ Year : 47|8@0+ (1,1985) [1985|2240] ""  DigiStop
+ SG_ Day : 39|8@0+ (0.25,0) [0|63.75] ""  DigiStop
+ SG_ Month : 31|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ Hours : 23|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ Minutes : 15|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ Seconds : 7|8@0+ (0.25,0) [0|63.75] ""  DigiStop
+
+BO_ 2162881066 CxD_TimeRequest: 8 LoopX
+ SG_ Local_Hour_offset : 63|8@0+ (1,-125) [-125|130] ""  DigiStop
+ SG_ Local_Minute_offset : 55|8@0+ (1,-125) [-125|130] ""  DigiStop
+ SG_ Year : 47|8@0+ (1,1985) [1985|2240] ""  DigiStop
+ SG_ Day : 39|8@0+ (0.25,0) [0|63.75] ""  DigiStop
+ SG_ Month : 31|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ Hours : 23|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ Minutes : 15|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ Seconds : 7|8@0+ (0.25,0) [0|63.75] ""  DigiStop
+
+BO_ 2364674602 CxD_VehicleSpeed: 8 LoopX
+ SG_ F212_VehicelSpeed : 31|8@0+ (0.5,0) [0|127.5] ""  DigiStop
+
+BO_ 2566573298 Machine_Reply: 8 DigiStop
+ SG_ FACC_Message_Identifier : 63|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACC_Register_Value3 : 55|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACC_Register_Value2 : 47|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACC_Register_Value1 : 39|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACC_Register_Value0 : 31|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACC_Register_Format : 23|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACC_Register_Index : 15|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACC_Status : 7|8@0+ (1,0) [0|255] ""  LoopX
+
+BO_ 2566573042 Machine_Data: 8 DigiStop
+ SG_ FACB_MessageIdentifier : 63|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACB_UserConfig : 55|8@0+ (1,0) [0|255] ""  LoopX
+ SG_ FACB_SubsystemData : 15|40@0+ (1,0) [0|1099511627775] ""  LoopX
+ SG_ FACB_SubsystemHeader : 7|8@0+ (1,0) [0|255] ""  LoopX
+
+BO_ 2566000938 CxD_Command: 8 LoopX
+ SG_ F211_Message_Identifier : 63|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F211_Register_Value3 : 55|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F211_Register_Value2 : 47|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F211_Register_Value1 : 39|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F211_Register_Value0 : 31|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F211_Register_Select : 23|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F211_Register_Index : 15|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F211_Command : 7|8@0+ (1,0) [0|255] ""  DigiStop
+
+BO_ 2364674090 CxD_Status: 8 LoopX
+ SG_ F210_Message_Identifier : 63|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F210_Register_Value3 : 55|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F210_Register_Value2 : 47|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F210_Register_Value1 : 39|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F210_Register_Value0 : 31|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F210_Register_Select : 23|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F210_Register_Index : 15|8@0+ (1,0) [0|255] ""  DigiStop
+ SG_ F210_Status : 7|8@0+ (1,0) [0|255] ""  DigiStop
+
+
+
+CM_ BO_ 2566842098 "DigiStop responds whith Date/Time PGN";
+CM_ SG_ 2566842098 Local_Hour_offset "±125 hours, Time zone hour offset (127 = UTC + 2)";
+CM_ SG_ 2566842098 Local_Minute_offset "±125 min Time zone minute offset (127 = UTC + 2)";
+CM_ SG_ 2566842098 Year "Date year (rtcTime.year + 1985)";
+CM_ SG_ 2566842098 Day "Date day (rtcTime.day/0.25)";
+CM_ SG_ 2566842098 Month "Date month (rtcTime.month)";
+CM_ SG_ 2566842098 Hours "Time hours (rtcTime.hours)";
+CM_ SG_ 2566842098 Minutes "Time minutes (rtcTime.minutes)";
+CM_ SG_ 2566842098 Seconds "Time seconds (rtcTime.seconds/0.25)";
+CM_ BO_ 2162830066 "DigiStop (0xF2) requesting Date/Time from CxD (0x2A)";
+CM_ SG_ 2162830066 Local_Hour_offset "±125 hours, Time zone hour offset (127 = UTC + 2)";
+CM_ SG_ 2162830066 Local_Minute_offset "±125 min Time zone minute offset (127 = UTC + 2)";
+CM_ SG_ 2162830066 Year "Date year (rtcTime.year + 1985)";
+CM_ SG_ 2162830066 Day "Date day (rtcTime.day/0.25)";
+CM_ SG_ 2162830066 Month "Date month (rtcTime.month)";
+CM_ SG_ 2162830066 Hours "Time hours (rtcTime.hours)";
+CM_ SG_ 2162830066 Minutes "Time minutes (rtcTime.minutes)";
+CM_ SG_ 2162830066 Seconds "Time seconds (rtcTime.seconds/0.25)";
+CM_ BO_ 2566841898 "CxD responds whith Date/Time PGN";
+CM_ SG_ 2566841898 Local_Hour_offset "±125 hours, Time zone hour offset (127 = UTC + 2)";
+CM_ SG_ 2566841898 Local_Minute_offset "±125 min Time zone minute offset (127 = UTC + 2)";
+CM_ SG_ 2566841898 Year "Date year (rtcTime.year + 1985)";
+CM_ SG_ 2566841898 Day "Date day (rtcTime.day/0.25)";
+CM_ SG_ 2566841898 Month "Date month (rtcTime.month)";
+CM_ SG_ 2566841898 Hours "Time hours (rtcTime.hours)";
+CM_ SG_ 2566841898 Minutes "Time minutes (rtcTime.minutes)";
+CM_ SG_ 2566841898 Seconds "Time seconds (rtcTime.seconds/0.25)";
+CM_ BO_ 2162881066 "CxD (0x2A) requesting Date/Time from DigiStop (0xF2)";
+CM_ SG_ 2162881066 Local_Hour_offset "±125 hours, Time zone hour offset (127 = UTC + 2)";
+CM_ SG_ 2162881066 Local_Minute_offset "±125 min Time zone minute offset (127 = UTC + 2)";
+CM_ SG_ 2162881066 Year "Date year (rtcTime.year + 1985)";
+CM_ SG_ 2162881066 Day "Date day (rtcTime.day/0.25)";
+CM_ SG_ 2162881066 Month "Date month (rtcTime.month)";
+CM_ SG_ 2162881066 Hours "Time hours (rtcTime.hours)";
+CM_ SG_ 2162881066 Minutes "Time minutes (rtcTime.minutes)";
+CM_ SG_ 2162881066 Seconds "Time seconds (rtcTime.seconds/0.25)";
+CM_ BO_ 2364674602 "Optional vehicle speed data for enhanced functionality, Broadcast rate: 100ms";
+CM_ SG_ 2364674602 F212_VehicelSpeed "CxD vehicle speed data";
+CM_ BO_ 2566573298 "Machine response to CxD commands - On request only";
+CM_ SG_ 2566573298 FACC_Message_Identifier "Incrementing counter";
+CM_ SG_ 2566573298 FACC_Register_Value3 "Most significant byte of register value specified by SPN: RegisterIndex";
+CM_ SG_ 2566573298 FACC_Register_Value2 "Next significant byte of register value specified by SPN: RegisterIndex";
+CM_ SG_ 2566573298 FACC_Register_Value1 "Next significant byte of register value specified by SPN: RegisterIndex";
+CM_ SG_ 2566573298 FACC_Register_Value0 "Least significant byte of 32-bit token for SPN: RegisterIndex";
+CM_ SG_ 2566573298 FACC_Register_Format "Format information for machine register at specified index";
+CM_ SG_ 2566573298 FACC_Register_Index "Index to machine register";
+CM_ SG_ 2566573298 FACC_Status "Response from machine to action or enquiry sent by CxD";
+CM_ BO_ 2566573042 "Continuous machine data transmission; Broadcast rate:100ms; Priority:5.";
+CM_ SG_ 2566573042 FACB_MessageIdentifier "Incrementing counter";
+CM_ SG_ 2566573042 FACB_UserConfig "Available for use";
+CM_ SG_ 2566573042 FACB_SubsystemData "Information from machine for specified subsystem";
+CM_ SG_ 2566573042 FACB_SubsystemHeader "Header information including subsystem and error indication flags";
+CM_ BO_ 2566000938 "Commands from CxD to machine - Broadcast rate:100ms, Priority:1;";
+CM_ SG_ 2566000938 F211_Message_Identifier "Incrementing counter";
+CM_ SG_ 2566000938 F211_Register_Value3 "Most significant byte of 32-bit token for SPN: RegisterIndex";
+CM_ SG_ 2566000938 F211_Register_Value2 "Next significant byte of 32-bit token for SPN: RegisterIndex";
+CM_ SG_ 2566000938 F211_Register_Value1 "Next significant byte of 32-bit token";
+CM_ SG_ 2566000938 F211_Register_Value0 "Least significant byte of 32-bit token for SPN: RegisterIndex";
+CM_ SG_ 2566000938 F211_Register_Select "Used with RegisterIndex to allow multiple setpoints in a single instruction";
+CM_ SG_ 2566000938 F211_Register_Index "Index to machine register";
+CM_ SG_ 2566000938 F211_Command "Action or enquiry sent from CxD to the machine";
+CM_ BO_ 2364674090 "Initial communication and periodic status updates, Broadcast rate: 10ms";
+CM_ SG_ 2364674090 F210_Message_Identifier "Incrementing counter";
+CM_ SG_ 2364674090 F210_Register_Value3 "Most significant byte of register value specified by SPN: RegisterIndex";
+CM_ SG_ 2364674090 F210_Register_Value2 "Next significant byte of register value specified by SPN: RegisterIndex";
+CM_ SG_ 2364674090 F210_Register_Value1 "Next significant byte of register value specified by SPN: RegisterIndex";
+CM_ SG_ 2364674090 F210_Register_Value0 "Least significant byte of register balue specified by SPN: RegisterIndex";
+CM_ SG_ 2364674090 F210_Register_Select "Used with RegisterIndex to set TAG values for multiple matching setpoints";
+CM_ SG_ 2364674090 F210_Register_Index "Index to machine register";
+CM_ SG_ 2364674090 F210_Status "CxD to DigiStop status and initialization";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ SG_  "SignalIgnore" INT 0 1;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "MessageIgnore" INT 0 1;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DatabaseCompiler" STRING ;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "SignalIgnore" 0;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "MessageIgnore" 0;
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DatabaseCompiler" "";
+BA_ "DatabaseVersion" "1.0";
+BA_ "DatabaseCompiler" "LoopX";
+BA_ "BusType" "CAN";
+BA_ "ProtocolType" "J1939";
+BA_ "VFrameFormat" BO_ 2566842098 3;
+BA_ "VFrameFormat" BO_ 2162830066 3;
+BA_ "VFrameFormat" BO_ 2566841898 3;
+BA_ "VFrameFormat" BO_ 2162881066 3;
+BA_ "VFrameFormat" BO_ 2364674602 3;
+BA_ "VFrameFormat" BO_ 2566573298 3;
+BA_ "VFrameFormat" BO_ 2566573042 3;
+BA_ "VFrameFormat" BO_ 2566000938 3;
+BA_ "VFrameFormat" BO_ 2364674090 3;
+VAL_ 2566000938 F211_Command 14 "Propulsion_setpoints Inhibit ON" 6 "Propulsion_setpoints Inhibit OFF" 12 "Stand_Down Inhibit ON" 4 "Stand_Down Inhibit OFF" 13 "BYPASS_PROPULSION Inhibit ON" 5 "BYPASS_PROPULSION Inhibit OFF" 11 "SLOW_DOWN Inhibit ON" 10 "CONTROLLED_STOP Inhibit ON" 3 "SLOW_DOWN Inhibit OFF" 2 "CONTROLLED_STOP Inhibit OFF" 9 "EMERGENCY_STOP Inhibit ON" 8 "Normal operation Inhibit ON" 1 "EMERGENCY_STOP Inhibit OFF " 0 "Normal operation Inhibit OFF" ;
+

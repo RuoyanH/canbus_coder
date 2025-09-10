@@ -1,0 +1,1253 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: LoopX Symbot
+VAL_TABLE_ GPSfix_value 4 " RTK Fixed - RTK fixed solution" 3 " RTK Float - Real-Time Kinematic" 2 "3D Fix - Full 3D fix" 1 "2DFix -Only horizontal position" 0 "No Fix - No valid GPS data" ;
+VAL_TABLE_ engineinfo_value 15 "N/A" 2 "Engine ON" 1 "ACC" 0 "Engine Off" ;
+VAL_TABLE_ gear_value 15 "N/A (not available)" 3 "Park" 2 "Reverse" 1 "Drive" 0 "Neutral" ;
+
+
+BO_ 2147483904 EngineInfo: 8 Symbot
+ SG_ EngineInfoSequence : 7|16@0+ (1,0) [0|65535] ""  LoopX
+ SG_ Gear : 23|4@0+ (1,0) [0|15] ""  LoopX
+ SG_ Speed : 19|12@0+ (0.1,0) [0|409.5] "m/s"  LoopX
+ SG_ Engine_state : 39|4@0+ (1,0) [0|15] ""  LoopX
+
+BO_ 2147483905 GPS: 8 Symbot
+ SG_ GpsSequence : 7|12@0+ (1,0) [0|4095] ""  LoopX
+ SG_ FixState : 11|4@0+ (1,0) [0|15] ""  LoopX
+ SG_ Longitude : 23|24@0+ (0.0001,-180) [-180|1497.7215] ""  LoopX
+ SG_ Latitude : 47|24@0+ (0.0001,-90) [-90|1587.7215] ""  LoopX
+
+BO_ 2365460961 Front_Object1_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365526497 Front_Object1_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365461217 Front_Object2_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365526753 Front_Object2_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365461473 Front_Object3_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365527009 Front_Object3_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365461729 Front_Object4_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365527265 Front_Object4_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365461985 Front_Object5_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365527521 Front_Object5_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365462241 Front_Object6_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365527777 Front_Object6_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365462497 Front_Object7_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365528033 Front_Object7_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365462753 Front_Object8_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365528289 Front_Object8_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365463009 Front_Object9_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365528545 Front_Object9_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365463265 Front_Object10_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365528801 Front_Object10_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365463521 Front_Object11_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365529057 Front_Object11_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365463777 Front_Object12_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365529313 Front_Object12_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365464033 Front_Object13_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365529569 Front_Object13_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365464289 Front_Object14_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365529825 Front_Object14_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365464545 Front_Object15_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365530081 Front_Object15_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365464801 Front_Object16_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365530337 Front_Object16_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365465057 Front_Object17_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365530593 Front_Object17_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365465313 Front_Object18_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365530849 Front_Object18_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365465569 Front_Object19_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365531105 Front_Object19_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365465825 Front_Object20_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365531361 Front_Object20_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365466081 Front_Object21_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365531617 Front_Object21_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365466337 Front_Object22_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365531873 Front_Object22_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365466593 Front_Object23_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365532129 Front_Object23_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365466849 Front_Object24_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365532385 Front_Object24_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365467105 Front_Object25_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365532641 Front_Object25_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365467361 Front_Object26_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365532897 Front_Object26_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365467617 Front_Object27_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365533153 Front_Object27_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365467873 Front_Object28_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365533409 Front_Object28_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365468129 Front_Object29_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365533665 Front_Object29_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365468385 Front_Object30_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365533921 Front_Object30_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365468641 Front_Object31_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365534177 Front_Object31_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365468897 Front_Object32_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365534433 Front_Object32_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365469153 Rear_Object1_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365534689 Rear_Object1_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365469409 Rear_Object2_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365534945 Rear_Object2_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365469665 Rear_Object3_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365535201 Rear_Object3_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365469921 Rear_Object4_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365535457 Rear_Object4_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365470177 Rear_Object5_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365535713 Rear_Object5_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365470433 Rear_Object6_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365535969 Rear_Object6_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365470689 Rear_Object7_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365536225 Rear_Object7_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365470945 Rear_Object8_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365536481 Rear_Object8_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365471201 Rear_Object9_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365536737 Rear_Object9_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365471457 Rear_Object10_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365536993 Rear_Object10_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365471713 Rear_Object11_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365537249 Rear_Object11_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365471969 Rear_Object12_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365537505 Rear_Object12_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365472225 Rear_Object13_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365537761 Rear_Object13_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365472481 Rear_Object14_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365538017 Rear_Object14_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365472737 Rear_Object15_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365538273 Rear_Object15_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365472993 Rear_Object16_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365538529 Rear_Object16_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365473249 Rear_Object17_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365538785 Rear_Object17_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365473505 Rear_Object18_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365539041 Rear_Object18_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365473761 Rear_Object19_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365539297 Rear_Object19_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365474017 Rear_Object20_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365539553 Rear_Object20_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365474273 Rear_Object21_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365539809 Rear_Object21_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365474529 Rear_Object22_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365540065 Rear_Object22_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365474785 Rear_Object23_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365540321 Rear_Object23_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365475041 Rear_Object24_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365540577 Rear_Object24_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365475297 Rear_Object25_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365540833 Rear_Object25_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365475553 Rear_Object26_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365541089 Rear_Object26_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365475809 Rear_Object27_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365541345 Rear_Object27_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365476065 Rear_Object28_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365541601 Rear_Object28_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365476321 Rear_Object29_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365541857 Rear_Object29_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365476577 Rear_Object30_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365542113 Rear_Object30_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365476833 Rear_Object31_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365542369 Rear_Object31_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+BO_ 2365477089 Rear_Object32_Basic: 8 LoopX
+ SG_ Sequence_BD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ ObjectID : 23|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ ObjectType : 31|8@0+ (1,0) [0|255] ""  Symbot
+ SG_ Size_X : 39|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ Size_Y : 47|8@0+ (0.5,0) [0|127.5] "m"  Symbot
+ SG_ DangerLevel : 55|4@0+ (1,0) [0|15] ""  Symbot
+
+BO_ 2365542625 Rear_Object32_Kinematic: 8 LoopX
+ SG_ Sequence_KD : 7|16@0+ (1,0) [0|65535] ""  Symbot
+ SG_ X_position : 23|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ Y_position : 27|12@0+ (0.1,-204.8) [-204.8|204.7] "m"  Symbot
+ SG_ X_velocity : 47|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ Y_velocity : 55|8@0+ (0.2,-25.5) [-25.5|25.5] "m/s"  Symbot
+ SG_ HeadAngle : 63|8@0+ (0.02464,-3.1416) [-3.1416|3.1416] "rad"  Symbot
+
+
+
+CM_ BO_ 2147483904 "Vehicle State Data";
+CM_ SG_ 2147483904 EngineInfoSequence "Sequence is a 16-bit unsigned integer representing the detection cycle or frame index";
+CM_ SG_ 2147483904 Gear "0 = Neutral, 1 = Drive, 2 = Reverse, 3 = Park, 0xF = N/A (not available)";
+CM_ SG_ 2147483904 Speed "Scaled ego speed in 0.1 m/s increments (0–409.5 m/s max). 0xFFF = N/A";
+CM_ SG_ 2147483904 Engine_state "Engine State for configuring delayed power-off of LoopX system.
+0 = Engine Off, 1=ACC, 2=Engine ON.
+";
+CM_ BO_ 2147483905 "Vehicle GPS Data";
+CM_ SG_ 2147483905 GpsSequence "Sequence is a 12-bit unsigned integer representing the detection cycle or frame index";
+CM_ SG_ 2147483905 FixState "GPS fixed state";
+CM_ SG_ 2147483905 Longitude "Encoded GPS longitude,Longitude = (encoded * 0.0001) - 180";
+CM_ SG_ 2147483905 Latitude "Encoded GPS latitude, Latitude = (encoded * 0.0001) - 90";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ SG_  "SignalIgnore" INT 0 1;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "MessageIgnore" INT 0 1;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DatabaseCompiler" STRING ;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "SignalIgnore" 0;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "MessageIgnore" 0;
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DatabaseCompiler" "";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DatabaseCompiler" "LoopX";
+BA_ "DatabaseVersion" "1.0";
+BA_ "VFrameFormat" BO_ 2147483904 1;
+BA_ "VFrameFormat" BO_ 2147483905 1;
+BA_ "VFrameFormat" BO_ 2365460961 3;
+BA_ "VFrameFormat" BO_ 2365526497 3;
+BA_ "VFrameFormat" BO_ 2365461217 3;
+BA_ "VFrameFormat" BO_ 2365526753 3;
+BA_ "VFrameFormat" BO_ 2365461473 3;
+BA_ "VFrameFormat" BO_ 2365527009 3;
+BA_ "VFrameFormat" BO_ 2365461729 3;
+BA_ "VFrameFormat" BO_ 2365527265 3;
+BA_ "VFrameFormat" BO_ 2365461985 3;
+BA_ "VFrameFormat" BO_ 2365527521 3;
+BA_ "VFrameFormat" BO_ 2365462241 3;
+BA_ "VFrameFormat" BO_ 2365527777 3;
+BA_ "VFrameFormat" BO_ 2365462497 3;
+BA_ "VFrameFormat" BO_ 2365528033 3;
+BA_ "VFrameFormat" BO_ 2365462753 3;
+BA_ "VFrameFormat" BO_ 2365528289 3;
+BA_ "VFrameFormat" BO_ 2365463009 3;
+BA_ "VFrameFormat" BO_ 2365528545 3;
+BA_ "VFrameFormat" BO_ 2365463265 3;
+BA_ "VFrameFormat" BO_ 2365528801 3;
+BA_ "VFrameFormat" BO_ 2365463521 3;
+BA_ "VFrameFormat" BO_ 2365529057 3;
+BA_ "VFrameFormat" BO_ 2365463777 3;
+BA_ "VFrameFormat" BO_ 2365529313 3;
+BA_ "VFrameFormat" BO_ 2365464033 3;
+BA_ "VFrameFormat" BO_ 2365529569 3;
+BA_ "VFrameFormat" BO_ 2365464289 3;
+BA_ "VFrameFormat" BO_ 2365529825 3;
+BA_ "VFrameFormat" BO_ 2365464545 3;
+BA_ "VFrameFormat" BO_ 2365530081 3;
+BA_ "VFrameFormat" BO_ 2365464801 3;
+BA_ "VFrameFormat" BO_ 2365530337 3;
+BA_ "VFrameFormat" BO_ 2365465057 3;
+BA_ "VFrameFormat" BO_ 2365530593 3;
+BA_ "VFrameFormat" BO_ 2365465313 3;
+BA_ "VFrameFormat" BO_ 2365530849 3;
+BA_ "VFrameFormat" BO_ 2365465569 3;
+BA_ "VFrameFormat" BO_ 2365531105 3;
+BA_ "VFrameFormat" BO_ 2365465825 3;
+BA_ "VFrameFormat" BO_ 2365531361 3;
+BA_ "VFrameFormat" BO_ 2365466081 3;
+BA_ "VFrameFormat" BO_ 2365531617 3;
+BA_ "VFrameFormat" BO_ 2365466337 3;
+BA_ "VFrameFormat" BO_ 2365531873 3;
+BA_ "VFrameFormat" BO_ 2365466593 3;
+BA_ "VFrameFormat" BO_ 2365532129 3;
+BA_ "VFrameFormat" BO_ 2365466849 3;
+BA_ "VFrameFormat" BO_ 2365532385 3;
+BA_ "VFrameFormat" BO_ 2365467105 3;
+BA_ "VFrameFormat" BO_ 2365532641 3;
+BA_ "VFrameFormat" BO_ 2365467361 3;
+BA_ "VFrameFormat" BO_ 2365532897 3;
+BA_ "VFrameFormat" BO_ 2365467617 3;
+BA_ "VFrameFormat" BO_ 2365533153 3;
+BA_ "VFrameFormat" BO_ 2365467873 3;
+BA_ "VFrameFormat" BO_ 2365533409 3;
+BA_ "VFrameFormat" BO_ 2365468129 3;
+BA_ "VFrameFormat" BO_ 2365533665 3;
+BA_ "VFrameFormat" BO_ 2365468385 3;
+BA_ "VFrameFormat" BO_ 2365533921 3;
+BA_ "VFrameFormat" BO_ 2365468641 3;
+BA_ "VFrameFormat" BO_ 2365534177 3;
+BA_ "VFrameFormat" BO_ 2365468897 3;
+BA_ "VFrameFormat" BO_ 2365534433 3;
+BA_ "VFrameFormat" BO_ 2365469153 3;
+BA_ "VFrameFormat" BO_ 2365534689 3;
+BA_ "VFrameFormat" BO_ 2365469409 3;
+BA_ "VFrameFormat" BO_ 2365534945 3;
+BA_ "VFrameFormat" BO_ 2365469665 3;
+BA_ "VFrameFormat" BO_ 2365535201 3;
+BA_ "VFrameFormat" BO_ 2365469921 3;
+BA_ "VFrameFormat" BO_ 2365535457 3;
+BA_ "VFrameFormat" BO_ 2365470177 3;
+BA_ "VFrameFormat" BO_ 2365535713 3;
+BA_ "VFrameFormat" BO_ 2365470433 3;
+BA_ "VFrameFormat" BO_ 2365535969 3;
+BA_ "VFrameFormat" BO_ 2365470689 3;
+BA_ "VFrameFormat" BO_ 2365536225 3;
+BA_ "VFrameFormat" BO_ 2365470945 3;
+BA_ "VFrameFormat" BO_ 2365536481 3;
+BA_ "VFrameFormat" BO_ 2365471201 3;
+BA_ "VFrameFormat" BO_ 2365536737 3;
+BA_ "VFrameFormat" BO_ 2365471457 3;
+BA_ "VFrameFormat" BO_ 2365536993 3;
+BA_ "VFrameFormat" BO_ 2365471713 3;
+BA_ "VFrameFormat" BO_ 2365537249 3;
+BA_ "VFrameFormat" BO_ 2365471969 3;
+BA_ "VFrameFormat" BO_ 2365537505 3;
+BA_ "VFrameFormat" BO_ 2365472225 3;
+BA_ "VFrameFormat" BO_ 2365537761 3;
+BA_ "VFrameFormat" BO_ 2365472481 3;
+BA_ "VFrameFormat" BO_ 2365538017 3;
+BA_ "VFrameFormat" BO_ 2365472737 3;
+BA_ "VFrameFormat" BO_ 2365538273 3;
+BA_ "VFrameFormat" BO_ 2365472993 3;
+BA_ "VFrameFormat" BO_ 2365538529 3;
+BA_ "VFrameFormat" BO_ 2365473249 3;
+BA_ "VFrameFormat" BO_ 2365538785 3;
+BA_ "VFrameFormat" BO_ 2365473505 3;
+BA_ "VFrameFormat" BO_ 2365539041 3;
+BA_ "VFrameFormat" BO_ 2365473761 3;
+BA_ "VFrameFormat" BO_ 2365539297 3;
+BA_ "VFrameFormat" BO_ 2365474017 3;
+BA_ "VFrameFormat" BO_ 2365539553 3;
+BA_ "VFrameFormat" BO_ 2365474273 3;
+BA_ "VFrameFormat" BO_ 2365539809 3;
+BA_ "VFrameFormat" BO_ 2365474529 3;
+BA_ "VFrameFormat" BO_ 2365540065 3;
+BA_ "VFrameFormat" BO_ 2365474785 3;
+BA_ "VFrameFormat" BO_ 2365540321 3;
+BA_ "VFrameFormat" BO_ 2365475041 3;
+BA_ "VFrameFormat" BO_ 2365540577 3;
+BA_ "VFrameFormat" BO_ 2365475297 3;
+BA_ "VFrameFormat" BO_ 2365540833 3;
+BA_ "VFrameFormat" BO_ 2365475553 3;
+BA_ "VFrameFormat" BO_ 2365541089 3;
+BA_ "VFrameFormat" BO_ 2365475809 3;
+BA_ "VFrameFormat" BO_ 2365541345 3;
+BA_ "VFrameFormat" BO_ 2365476065 3;
+BA_ "VFrameFormat" BO_ 2365541601 3;
+BA_ "VFrameFormat" BO_ 2365476321 3;
+BA_ "VFrameFormat" BO_ 2365541857 3;
+BA_ "VFrameFormat" BO_ 2365476577 3;
+BA_ "VFrameFormat" BO_ 2365542113 3;
+BA_ "VFrameFormat" BO_ 2365476833 3;
+BA_ "VFrameFormat" BO_ 2365542369 3;
+BA_ "VFrameFormat" BO_ 2365477089 3;
+BA_ "VFrameFormat" BO_ 2365542625 3;
+BA_ "SPN" SG_ 2147483904 EngineInfoSequence 1;
+BA_ "SPN" SG_ 2147483904 Gear 2;
+BA_ "SPN" SG_ 2147483904 Speed 3;
+BA_ "SPN" SG_ 2147483904 Engine_state 4;
+BA_ "SPN" SG_ 2147483905 GpsSequence 1;
+BA_ "SPN" SG_ 2147483905 FixState 2;
+BA_ "SPN" SG_ 2147483905 Longitude 3;
+BA_ "SPN" SG_ 2147483905 Latitude 4;
+VAL_ 2147483904 Gear 15 "N/A (not available)" 3 "Park" 2 "Reverse" 1 "Drive" 0 "Neutral" ;
+VAL_ 2147483904 Engine_state 15 "N/A" 2 "Engine ON" 1 "ACC" 0 "Engine Off" ;
+VAL_ 2147483905 FixState 4 " RTK Fixed - RTK fixed solution" 3 " RTK Float - Real-Time Kinematic" 2 "3D Fix - Full 3D fix" 1 "2DFix -Only horizontal position" 0 "No Fix - No valid GPS data" ;
+

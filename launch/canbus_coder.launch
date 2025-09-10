@@ -1,0 +1,50 @@
+<launch>
+    <!-- === Common args === -->
+    <arg name="dbc_folder" default="$(find canbus_coder)/config"/>
+    <arg name="dbc_file"   default="LoopX-DigiStop-J1939-2025-09_v1.0.dbc"/>
+    <arg name="launch_driver" default="true" />
+    <arg name="device" default="vcan0" />
+    <arg name="bitrate" default="250000" />
+    
+    <!-- === Logic timing args === -->
+    <arg name="auto_start" default="true"/>
+    <arg name="status_period_ms" default="10"/>
+    <arg name="command_period_ms"   default="100"/>
+    <arg name="speed_period_ms"     default="100"/>
+    <arg name="time_req_period_s"   default="5"/>
+    <arg name="time_sync_period_s"  default="60"/>
+
+    <!-- === SocketCAN Bridge === -->
+    <node pkg="socketcan_bridge" name="io_socketcan_bridge_inbound" type="socketcan_bridge_node" output="screen" respawn="true" respawn_delay="1" if="$(eval launch_driver==true)">
+        <remap from="received_messages" to="/$(arg device)/recv"/>
+        <remap from="sent_messages" to="/$(arg device)/send"/>
+        <param name="can_device" value="$(arg device)"/>
+        <param name="bitrate" value="$(arg bitrate)"/>
+    </node>   
+    
+    <!-- === CAN I/O node: DBC encode/decode, raw CAN bridge === -->
+    <node pkg="canbus_coder" type="can_io_node.py" name="can_io_node"  output="screen" respawn="true" respawn_delay="1">
+        <param name="dbc_folder" value="$(arg dbc_folder)" />
+        <param name="dbc_file"   value="$(arg dbc_file)" />
+        <param name="can_device" value="$(arg device)" />
+    </node>
+
+    <!-- === CAN handler node: handshake FSM, status, commands, time sync === -->
+    <node pkg="canbus_coder" type="can_handler_node.py" name="can_handler_node" output="screen" respawn="true" respawn_delay="1">
+        <param name="auto_start"           value="$(arg auto_start)"/>
+        <param name="status_period_ms"     value="$(arg status_period_ms)"/>
+        <param name="command_period_ms"    value="$(arg command_period_ms)"/>
+        <param name="speed_period_ms"      value="$(arg speed_period_ms)"/>
+        <param name="time_req_period_s"    value="$(arg time_req_period_s)"/>
+        <param name="time_sync_period_s"   value="$(arg time_sync_period_s)"/>
+    </node> 
+
+    <!-- === CAN bus coder === -->
+    <!-- <node pkg="canbus_coder" type="canbus_coder.py" name="canbus_coder_node" output="screen">
+        <param name="dbc_folder" value="$(arg dbc_folder)" />
+        <param name="dbc_file" value="$(arg dbc_file)" />
+        <param name="can_device" value="$(arg device)" />
+    </node> -->
+</launch>
+
+ 
