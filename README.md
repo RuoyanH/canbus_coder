@@ -29,6 +29,10 @@ sudo modprobe gs_usb
 ```
 sudo ip link set can0 up type can bitrate 250000
 ```
+OR use `vcan`
+```
+sudo ip link set vcan0 up
+```
 ## Start Nodes (can_decoder)
 Launch the `can_decoder`  node: 
 ```
@@ -47,6 +51,9 @@ cansend can0 18FACBF2#F100000000000001
 cansend can0 18FACBF2#F000000000000002
 
 ## [DigiStop] Send TimeRequest - Machina CxD Time Request
+cansend can0 00EA2AF2#0000000000000000
+
+## [DigiStop] Send Reply - Machina CxD Reply (PGN FACC)
 cansend can0 00EA2AF2#0000000000000000 
 ```
 ## Record CAN massges
