@@ -16,3 +16,7 @@ echo "[DigiStop] Step 3: Send TimeRequest"
 cansend $DEV 00EA2AF2#0000000000000000   #Machina CxD Time Request
 
 cansend $DEV 18FACCF2#FF00000000000001   #Machina CxD Reply (PGN FACC)
+
+rostopic pub /CxD/Command_ext canbus_coder/CxDCommand "{Command: 1, RegisterIndex: 2, RegisterSelect: 3, RegisterValues: 1234, Counter: 0}"
+rostopic pub /CxD/VehicleSpeed_ext canbus_coder/CxDVehicleSpeed "{Value: 45.6}"
+rostopic pub /CxD/TimeRequest_bool std_msgs/Bool "data: true"
