@@ -36,7 +36,7 @@ sudo ip link set vcan0 up
 ## Start Nodes (can_decoder)
 Launch the `can_decoder`  node: 
 ```
-roslaunch can_decoder can_decoder.launch
+roslaunch canbus_coder canbus_coder.launch
 ```
 
 ## CAN Test Command
