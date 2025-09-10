@@ -1,5 +1,5 @@
 
-# CANBus Decoder package
+# CANBus Coder package
 ## Features
 Decode and encode CAN massges from vehicles based on DBC files
 ## Install Dependencies
