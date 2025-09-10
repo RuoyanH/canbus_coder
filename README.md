@@ -37,11 +37,17 @@ roslaunch can_decoder can_decoder.launch
 
 ## CAN Test Command
 ```
-## CAN massage send
-cansend can0 101#0100000000000000 
+## listening CAN
+cancump can0
 
-## CAN massage receive
-candump can0  # Listen CAN0
+## [DigiStop] Step 1: Send 0xF1 (negotiation response) - Machina CxD Data (PGN FACB)
+cansend can0 18FACBF2#F100000000000001
+
+## [DigiStop] Step 2: Send 0xF0 (negotiation complete) - Machina CxD Data (PGN FACB)
+cansend can0 18FACBF2#F000000000000002
+
+## [DigiStop] Send TimeRequest - Machina CxD Time Request
+cansend can0 00EA2AF2#0000000000000000 
 ```
 ## Record CAN massges
 ```
